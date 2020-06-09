@@ -4,8 +4,8 @@ import (
 	"repo/test_go_echo/controller/staff"
 	"github.com/labstack/echo/middleware"
 	"net/http"
-"github.com/labstack/gommon/log"
-
+	"github.com/labstack/gommon/log"
+	"os"
 )
 
 func main() {
@@ -19,7 +19,10 @@ func main() {
 	e.Logger.SetLevel(log.DEBUG)
 	e.Logger.SetHeader("[e.Logger] ${time_rfc3339} ${level} ---> ")
 	e.Logger.Info("test")
+	file, _ := os.Create("log.txt")
+	e.Logger.SetOutput(file)
 
+	e.Logger.Output()
 	//gommon log, header will diff from e.Logger
 	log.SetHeader("[GOMMON LOG] ${time_rfc3339} ${level}")
 	log.Info("test here")

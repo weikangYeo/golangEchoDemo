@@ -1,0 +1,12 @@
+
+   ____    __
+  / __/___/ /  ___
+ / _// __/ _ \/ _ \
+/___/\__/_//_/\___/ v4.1.16
+High performance, minimalist Go web framework
+https://echo.labstack.com
+____________________________________O/_______
+                                    O\
+⇨ http server started on [::]:8081
+[e.Logger] 2020-06-09T16:36:57+08:00 INFO --->  test when calling API
+[Middleware LOG] time:2020-06-09T16:36:57.2306211+08:00 method=GET, uri=/, status=201
